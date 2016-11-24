@@ -19,7 +19,7 @@ public class Apoio {
         Connection conectar = con.conexao();
 
         try {
-            String sql = "insert into apoio (co_aluno,"
+            String sql = "insert into apoio (aluno,"
                                         + "  in_apoio_social, "
                                         + "  in_apoio_alimentacao,"
                                         + "  in_apoio_moradia,"

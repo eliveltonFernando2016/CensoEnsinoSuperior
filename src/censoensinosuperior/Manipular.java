@@ -41,7 +41,7 @@ public class Manipular {
     private NecessidadeEspecial necessidade;
     private OrganizacaoAcademica orgAcademica;
     private Reserva reserva;
-    
+
     public void lerArquivo(String caminho) {
         String linha;                                                           // Cria variável para armazenar a linha do arquivo a ser lido
         Tupla tupla = null;
@@ -135,8 +135,8 @@ public class Manipular {
                     st.nextToken().trim(),
                     st.nextToken().trim()
                 );
+                SeparaClasse(tupla);
             }
-            SeparaClasse(tupla);
             reader.close();
         } catch (IOException ex) {
             Logger.getLogger(Manipular.class.getName()).log(Level.SEVERE, null, ex);
@@ -228,9 +228,7 @@ public class Manipular {
         necessidade = new NecessidadeEspecial(Integer.parseInt(t.getIN_CEGUEIRA()), Integer.parseInt(t.getIN_BAIXA_VISAO()), Integer.parseInt(t.getIN_SURDEZ()), Integer.parseInt(t.getIN_DEF_AUDITIVA()), Integer.parseInt(t.getIN_DEF_FISICA()), Integer.parseInt(t.getIN_SURDOCEGUEIRA()), Integer.parseInt(t.getIN_DEF_MULTIPLA()), Integer.parseInt(t.getIN_DEF_MENTAL()));
         orgAcademica = new OrganizacaoAcademica(Integer.parseInt(t.getCO_ORGANIZACAO_ACADEMICA()), t.getDS_ORGANIZACAO_ACADEMICA());
         reserva = new Reserva(Integer.parseInt(t.getIN_RESERVA_VAGAS()), Integer.parseInt(t.getIN_RESERVA_ENSINO_PUBLICO()), Integer.parseInt(t.getIN_RESERVA_ETNICO()), Integer.parseInt(t.getIN_RESERVA_DEFICIENCIA()), Integer.parseInt(t.getIN_RESERVA_RENDA_FAMILIAR()), Integer.parseInt(t.getIN_RESERVA_OUTROS()));
-    
-        new DAO.CategoriaAdministrativa(catAdm);
-        new DAO.OrganizacaoAcademica(orgAcademica);
+
         new DAO.InstitutoEnsinoSuperior(ies, orgAcademica.getCO_ORGANIZACAO_ACADEMICA(), catAdm.getCO_CATEGORIA_ADMINISTRATIVA());
         new DAO.Curso(curso, grauAcademico.getCO_GRAU_ACADEMICO());
         new DAO.Aluno(aluno, corRaca.getCO_COR_RACA_ALUNO(), nacionalidade.getCO_NACIONALIDADE_ALUNO());

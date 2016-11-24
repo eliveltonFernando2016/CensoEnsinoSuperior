@@ -19,7 +19,7 @@ public class Matricula {
         Connection conectar = con.conexao();
 
         try {
-            String sql = "insert into curso (in_matricula,"
+            String sql = "insert into matricula (in_matricula,"
                                         + "  in_concluinte,"
                                         + "  in_ingresso,"
                                         + "  dt_ingresso_curso,"
@@ -44,7 +44,7 @@ public class Matricula {
             stm.execute();
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Inserção Curso Falhou!");
+            System.out.println("Inserção Matricula Falhou!");
         } finally{
             con.desconexao(conectar);
         }

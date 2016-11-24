@@ -19,7 +19,7 @@ public class Ingresso {
         Connection conectar = con.conexao();
 
         try {
-            String sql = "insert into ingresso (co_aluno,"
+            String sql = "insert into ingresso (aluno,"
                                         + "  in_ing_vestibular, "
                                         + "  in_ing_enem,"
                                         + "  in_ing_convenio_pecg)"
