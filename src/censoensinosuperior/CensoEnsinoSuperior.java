@@ -16,7 +16,7 @@ public class CensoEnsinoSuperior {
      */
     public static void main(String[] args) {
         Manipular manipula = new Manipular();
-        manipula.lerArquivo("/home/elivelton/Documentos/Microdados Censo Ensino Superior Inep/2009/DADOS/teste2.txt");
+        manipula.lerArquivo("/home/elivelton/Documentos/Microdados Censo Ensino Superior Inep/2009/DADOS/DM_ALUNO.csv");
     }
 
 }

@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 public class Aluno {
 
     public Aluno(Model.Aluno al, int cor, int nacio) {
-        if(AlunoExistente(al.getCO_ALUNO())){
+        if(!AlunoExistente(al.getCO_ALUNO())){
             ConexaoBD con = new ConexaoBD();
             Connection conectar = con.conexao();
 
