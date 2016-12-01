@@ -171,7 +171,7 @@ public class Tupla {
         this.DT_INGRESSO_CURSO = DT_INGRESSO_CURSO;
         this.ANO_INGRESSO = ANO_INGRESSO;
     }
-    
+
     public String getCO_IES() {
         return CO_IES;
     }

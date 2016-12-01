@@ -28,7 +28,7 @@ public class Reserva {
                                             + "   in_reserva_outros)"
                                             + "   values(?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement stm = conectar.prepareStatement(sql);
-            
+
             stm.setLong(1, aluno);
             stm.setInt(2, r.getIN_RESERVA_VAGAS());
             stm.setInt(3, r.getIN_RESERVA_ENSINO_PUBLICO());
