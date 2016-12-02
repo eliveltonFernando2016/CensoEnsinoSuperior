@@ -2,8 +2,9 @@
 
 -- DROP TABLE aluno;
 
-CREATE TABLE aluno(
-  co_aluno integer NOT NULL,
+CREATE TABLE aluno
+(
+  co_aluno bigint NOT NULL,
   in_sexo_aluno integer,
   cor_raca_aluno integer,
   nacionalidade_aluno integer,
@@ -25,3 +26,13 @@ WITH (
 );
 ALTER TABLE aluno
   OWNER TO postgres;
+
+-- Index: idx_aluno
+
+-- DROP INDEX idx_aluno;
+
+CREATE INDEX idx_aluno
+  ON aluno
+  USING hash
+  (co_aluno);
+

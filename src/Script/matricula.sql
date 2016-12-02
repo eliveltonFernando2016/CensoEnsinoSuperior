@@ -2,17 +2,17 @@
 
 -- DROP TABLE matricula;
 
-CREATE TABLE matricula(
-  in_matricula integer NOT NULL,
+CREATE TABLE matricula
+(
   in_concluinte integer,
   in_ingresso integer,
   dt_ingresso_curso character varying,
   ano_ingresso integer,
-  aluno integer,
+  aluno bigint,
   ies integer,
   curso integer,
   aluno_situacao integer,
-  CONSTRAINT matricula_pkey PRIMARY KEY (in_matricula),
+  in_matricula integer,
   CONSTRAINT matricula_aluno_fkey FOREIGN KEY (aluno)
       REFERENCES aluno (co_aluno) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION,
@@ -31,3 +31,13 @@ WITH (
 );
 ALTER TABLE matricula
   OWNER TO postgres;
+
+-- Index: alunoanoindex
+
+-- DROP INDEX alunoanoindex;
+
+CREATE INDEX alunoanoindex
+  ON matricula
+  USING btree
+  (aluno, ano_ingresso);
+

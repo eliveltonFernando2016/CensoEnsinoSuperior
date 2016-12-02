@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package censoensinosuperior;
+package CensoEnsinoSuperior;
 
 import Model.Aluno;
 import Model.AlunoSituacao;
@@ -26,7 +26,7 @@ import Model.Reserva;
  *
  * @author elivelton
  */
-public class SeparaClasse extends Thread{
+public class SeparaClasse{
     private Aluno aluno = null;
     private AlunoSituacao alunoSituacao = null;
     private Apoio apoio = null;
@@ -43,8 +43,6 @@ public class SeparaClasse extends Thread{
     private NecessidadeEspecial necessidade = null;
     private OrganizacaoAcademica orgAcademica = null;
     private Reserva reserva = null;
-
-    Thread th;
 
     public void run() {
         if("".equals(Manipular10.tupla.getCO_IES()))                        Manipular10.tupla.setCO_IES("-1");
@@ -142,13 +140,5 @@ public class SeparaClasse extends Thread{
         new DAO.Apoio(apoio, aluno.getCO_ALUNO());
         new DAO.Atividade(atividade, aluno.getCO_ALUNO());
         new DAO.Ingresso(ingresso, aluno.getCO_ALUNO());
-    }
-
-    @Override
-    public void start() {
-	if (th == null) {
-            th = new Thread (this);
-            th.start ();
-        }
     }
 }

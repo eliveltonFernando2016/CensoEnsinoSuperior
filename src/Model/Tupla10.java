@@ -10,21 +10,22 @@ package Model;
  * @author elivelton
  */
 public class Tupla10 {
+
     private String CO_IES = null;
     private String NO_IES = null;
     private String CO_CATEGORIA_ADMINISTRATIVA = null;
     private String DS_CATEGORIA_ADMINISTRATIVA = null;
-    private String CO_ORGANIZACAO_ACADEMICA = null;                   //5
+    private String CO_ORGANIZACAO_ACADEMICA = null;
     private String DS_ORGANIZACAO_ACADEMICA = null;
     private String CO_CURSO = null;
-    private String NO_CURSO= null;
+    private String NO_CURSO = null;
     private String CO_NIVEL_ACADEMICO = null;
-    private String CO_MODALIDADE_ENSINO = null;                       //10
+    private String CO_MODALIDADE_ENSINO = null;
     private String CO_GRAU_ACADEMICO = null;
     private String CO_ALUNO_CURSO = null;
     private String CO_ALUNO = null;
     private String CO_COR_RACA_ALUNO = null;
-    private String ignorar1 = null;                                   //15
+    private String ignorar1 = null;
     private String IN_SEXO_ALUNO = null;
     private String ignorar2 = null;
     private String NU_ANO_ALUNO_NASC = null;
@@ -97,7 +98,7 @@ public class Tupla10 {
     private String ignorar15 = null;
     private String ignorar16 = null;
     private String ANO_INGRESSO = null;
-
+    
     public Tupla10(String CO_IES, String NO_IES, String CO_CATEGORIA_ADMINISTRATIVA, String DS_CATEGORIA_ADMINISTRATIVA, String CO_ORGANIZACAO_ACADEMICA, String DS_ORGANIZACAO_ACADEMICA, String CO_CURSO, String NO_CURSO, String CO_NIVEL_ACADEMICO, String CO_MODALIDADE_ENSINO, String CO_GRAU_ACADEMICO, String CO_ALUNO_CURSO, String CO_ALUNO, String CO_COR_RACA_ALUNO, String ignorar1, String IN_SEXO_ALUNO, String ignorar2, String NU_ANO_ALUNO_NASC, String NU_DIA_ALUNO_NASC, String NU_MES_ALUNO_NASC, String NU_IDADE_ALUNO, String CO_NACIONALIDADE_ALUNO, String CO_PAIS_ORIGEM_ALUNO, String ignorar3, String ignorar4, String CO_ALUNO_SITUACAO, String ignorar5, String IN_DEF_AUDITIVA, String IN_DEF_FISICA, String IN_DEF_MENTAL, String IN_DEF_MULTIPLA, String IN_SURDEZ, String IN_SURDOCEGUEIRA, String IN_BAIXA_VISAO, String IN_CEGUEIRA, String DT_INGRESSO_CURSO, String ignorar6, String ignorar7, String IN_RESERVA_VAGAS, String IN_FINANC_ESTUDANTIL, String IN_APOIO_SOCIAL, String ignorar8, String ignorar9, String IN_ING_VESTIBULAR, String IN_ING_ENEM, String ignorar10, String IN_ING_CONVENIO_PECG, String ignorar11, String IN_RESERVA_ETNICO, String IN_RESERVA_DEFICIENCIA, String IN_RESERVA_ENSINO_PUBLICO, String IN_RESERVA_RENDA_FAMILIAR, String IN_RESERVA_OUTROS, String IN_FIES, String IN_FINANC_ESTADUAL_REEMB, String IN_FINANC_MUNICIPAL_REEMB, String IN_FINANC_IES_REEMB, String IN_FINANC_EXTERNAS_REEMB, String ignorar12, String IN_PROUNI_INTEGRAL, String IN_PROUNI_PARCIAL, String IN_FINANC_ESTADUAL, String IN_FINANC_MUNICIPAL, String IN_FINANC_IES, String IN_FINANC_EXTERNAS, String ignorar13, String IN_APOIO_ALIMENTACAO, String IN_APOIO_BOLSA_PERMANENCIA, String IN_APOIO_BOLSA_TRABALHO, String IN_APOIO_MATERIAL_DIDATICO, String IN_APOIO_MORADIA, String IN_APOIO_TRANSPORTE, String IN_ATIV_ESTAG_N_OBRIG_NAO_REM, String IN_ATIV_EXTENSAO_NAO_REM, String IN_ATIV_MONITORIA_NAO_REM, String IN_ATIV_PESQUISA_NAO_REM, String IN_ATIV_ESTAG_N_OBRIG_REM, String IN_ATIV_EXTENSAO_REM, String IN_ATIV_MONITORIA_REM, String IN_ATIV_PESQUISA_REM, String ignorar14, String IN_MATRICULA, String IN_CONCLUINTE, String IN_INGRESSO, String ignorar15, String ignorar16, String ANO_INGRESSO) {
         this.CO_IES = CO_IES;
         this.NO_IES = NO_IES;
@@ -883,6 +884,5 @@ public class Tupla10 {
     public void setANO_INGRESSO(String ANO_INGRESSO) {
         this.ANO_INGRESSO = ANO_INGRESSO;
     }
-    
-    
+
 }
